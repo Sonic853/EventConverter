@@ -106,7 +106,7 @@ const getTag = (tag: string) => {
   //     return key
   //   }
   // }
-  return tag
+  return tagEn
 }
 
 const result = await res.text()
