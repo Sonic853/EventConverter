@@ -51,21 +51,54 @@ const platforms: Record<string, number> = {}
 const tags: Record<string, number> = {}
 const i18nTags = await (await fetch("https://github.com/UdonEvent/udonevent.github.io/raw/refs/heads/master/i18n/tags.json")).text()
 const i18nJson: TranslationJ = i18nTags ? JSON.parse(i18nTags) : {}
+const addedI18n: TranslationJ = {}
 
 const getTag = (tag: string) => {
   const keys = Object.keys(i18nJson)
   for (const key of keys) {
     if (i18nJson[key]["zh-CN"] === tag) {
+      addedI18n[key] = {
+        "zh-CN": tag,
+      }
       return key
     }
   }
+  let tagEn: string
   switch (tag) {
-    case "聚会": return "Party"
-    case "派对": return "Party"
-    case "逛图": return "Travel"
-    case "学习": return "Learn"
-    case "舞蹈": return "Dance"
-    case "RP": return "Roleplay"
+    case "聚会":
+      {
+        tagEn = "Party"
+      }
+      break
+    case "派对":
+      {
+        tagEn = "Party"
+      }
+      break
+    case "逛图":
+      {
+        tagEn = "Travel"
+      }
+      break
+    case "学习":
+      {
+        tagEn = "Learn"
+      }
+      break
+    case "舞蹈":
+      {
+        tagEn = "Dance"
+      }
+      break
+    case "RP":
+      {
+        tagEn = "Roleplay"
+      }
+      break
+    default: return tag
+  }
+  addedI18n[tagEn] = {
+    "zh-CN": i18nJson[tagEn]["zh-CN"],
   }
   // 模糊匹配
   // for (const key of keys) {
@@ -171,6 +204,7 @@ data.description = resultData.inform
 data.platform = platforms
 data.tags = tags
 data.events = events
+data.i18n = addedI18n
 const eventsData = JSON.stringify(data, null, 2)
 const folder = path.join(".", "pages")
 if (!await fs.exists(folder)) {
