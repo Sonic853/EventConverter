@@ -165,6 +165,8 @@ for (const key of keys) {
           join: "",
           note: ""
         }
+        // 将 event.description 中的 \\n 替换为 \n
+        event.description = event.description.replace(/\\\\n/g, "\\n")
         events.push(event)
       })
     }
