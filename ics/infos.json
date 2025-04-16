@@ -1,0 +1,20 @@
+{
+  "vrc.hhlab.cc": {
+    "enable": true,
+    "ics": "https://calendar.google.com/calendar/ical/f5682t1g68e42n1ij023o8dk2o%40group.calendar.google.com/public/basic.ics",
+    "name": "VRChat中文圈活動日曆",
+    "description": "VRChat台港澳圈活動日曆",
+    "language": "zh-HK",
+    "url": "https://hh2099.github.io/VRC_web/",
+    "submitUrl": "https://forms.gle/SGs2SewsBug1G4F27"
+  },
+  "rlvrc": {
+    "enable": false,
+    "ics": "https://bucket.rlvrc.cn/activity-calendar/ics/event-calendar.ics",
+    "name": "中文活动日历",
+    "description": "探索和管理你的活动",
+    "language": "zh-CN",
+    "url": "https://rlvrc.cn/calendar",
+    "submitUrl": "https://rlvrc.cn/calendar/event-submission"
+  }
+}
