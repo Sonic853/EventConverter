@@ -1,0 +1,11 @@
+{
+  "rlvrc": {
+    "enable": false,
+    "ics": "https://bucket.rlvrc.cn/activity-calendar/ics/event-calendar.ics",
+    "name": "中文活动日历",
+    "description": "探索和管理你的活动",
+    "language": "zh-CN",
+    "url": "https://rlvrc.cn/calendar",
+    "submitUrl": "https://rlvrc.cn/calendar/event-submission"
+  }
+}
